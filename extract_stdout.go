@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func extractStdout(t *testing.T, fnc func()) string {
+func ExtractStdout(t *testing.T, fnc func()) string {
 	t.Helper()
 
 	orgStdout := os.Stdout
