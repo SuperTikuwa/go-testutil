@@ -18,7 +18,7 @@ func extractStdout(t *testing.T, fnc func()) string {
 
 	r, w, _ := os.Pipe()
 	os.Stdout = w
-	main()
+	fnc()
 	w.Close()
 
 	var buf bytes.Buffer
